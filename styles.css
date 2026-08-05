@@ -266,7 +266,7 @@ section{ padding: 90px 32px; }
 }
 .menu-item-price{
   font-family:'IBM Plex Mono', monospace;
-  color: var(--gold);
+  color: #123C29;
   font-size: 0.92rem;
   white-space: nowrap;
   margin-top: 10px;
