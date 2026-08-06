@@ -17,3 +17,20 @@ navLinks.querySelectorAll('a').forEach(a => {
     toggle.setAttribute('aria-expanded', false);
   });
 });
+
+// Order online dropdown (present on the Home page only)
+const orderToggle = document.getElementById('order-toggle');
+const orderDropdown = document.querySelector('.order-dropdown');
+if (orderToggle && orderDropdown) {
+  orderToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = orderDropdown.classList.toggle('open');
+    orderToggle.setAttribute('aria-expanded', isOpen);
+  });
+  document.addEventListener('click', (e) => {
+    if (!orderDropdown.contains(e.target)) {
+      orderDropdown.classList.remove('open');
+      orderToggle.setAttribute('aria-expanded', false);
+    }
+  });
+}

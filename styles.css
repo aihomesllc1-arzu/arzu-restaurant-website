@@ -126,6 +126,69 @@ nav{
   width: 22px; height: 1.5px; background: var(--ink);
 }
 
+/* ---------- ORDER ONLINE DROPDOWN ---------- */
+.order-dropdown{
+  position: relative;
+  margin-left: 24px;
+}
+.order-toggle{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  background: var(--green);
+  color: var(--white);
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor:pointer;
+  user-select:none;
+  box-shadow: 0 3px 10px rgba(29,85,60,0.35);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.order-toggle:hover{ background: #123C29; box-shadow: 0 4px 14px rgba(29,85,60,0.45); }
+.order-toggle .chevron{
+  width: 10px; height: 7px;
+  transition: transform 0.2s ease;
+}
+.order-toggle .chevron path{
+  fill:none; stroke: var(--white); stroke-width: 1.6; stroke-linecap:round; stroke-linejoin:round;
+}
+.order-dropdown.open .order-toggle .chevron{ transform: rotate(180deg); }
+.order-menu{
+  display:none;
+  position:absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(34,26,23,0.18);
+  padding: 8px;
+  min-width: 180px;
+  z-index: 50;
+}
+.order-dropdown.open .order-menu{ display:block; }
+.order-menu a{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 5px;
+  font-size: 0.92rem;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+.order-menu a:hover{ background: var(--bg); }
+.order-menu a svg{
+  width: 14px; height: 14px;
+  flex-shrink:0;
+}
+.order-menu a svg path{
+  fill:none; stroke: var(--ink-soft); stroke-width: 2; stroke-linecap:round; stroke-linejoin:round;
+}
+
 /* ---------- HERO ---------- */
 .hero{
   position: relative;
