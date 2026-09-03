@@ -596,6 +596,7 @@ footer{
   font-size: 0.72rem;
   color: var(--ink-soft);
 }
+#visitor-count{ font-variant-numeric: tabular-nums; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 860px){

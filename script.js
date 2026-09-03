@@ -34,3 +34,12 @@ if (orderToggle && orderDropdown) {
     }
   });
 }
+
+// Visitor counter (present on the Home page only)
+const visitorCountEl = document.getElementById('visitor-count');
+if (visitorCountEl) {
+  fetch('https://abacus.jasoncameron.dev/hit/eat-arzu-com/homepage')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => { visitorCountEl.textContent = data.value.toLocaleString(); })
+    .catch(() => { document.getElementById('visitor-counter')?.remove(); });
+}
