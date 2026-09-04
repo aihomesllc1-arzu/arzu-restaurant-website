@@ -596,7 +596,30 @@ footer{
   font-size: 0.72rem;
   color: var(--ink-soft);
 }
-#visitor-count{ font-variant-numeric: tabular-nums; }
+.tally{
+  display:inline-flex;
+  gap:2px;
+  margin-left:10px;
+  padding:3px;
+  vertical-align:middle;
+  background: var(--ink);
+  border-radius:4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.05);
+}
+.tally-digit{
+  display:inline-block;
+  width:1.05em;
+  padding:3px 0;
+  border-radius:2px;
+  background:#150f0c;
+  color: var(--gold);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.66rem;
+  font-variant-numeric: tabular-nums;
+  line-height:1;
+  text-align:center;
+  text-shadow: 0 0 4px rgba(185,138,50,0.55);
+}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 860px){

@@ -35,11 +35,14 @@ if (orderToggle && orderDropdown) {
   });
 }
 
-// Visitor counter (present on the Home page only)
-const visitorCountEl = document.getElementById('visitor-count');
-if (visitorCountEl) {
+// Visitor tally (present on the Home page only) — a plain digit readout, no label
+const tallyEl = document.getElementById('visitor-tally');
+if (tallyEl) {
   fetch('https://abacus.jasoncameron.dev/hit/eat-arzu-com/homepage')
     .then(r => r.ok ? r.json() : Promise.reject())
-    .then(data => { visitorCountEl.textContent = data.value.toLocaleString(); })
-    .catch(() => { document.getElementById('visitor-counter')?.remove(); });
+    .then(data => {
+      const digits = String(data.value).padStart(4, '0').split('');
+      tallyEl.innerHTML = digits.map(d => `<span class="tally-digit">${d}</span>`).join('');
+    })
+    .catch(() => { tallyEl.remove(); });
 }
