@@ -188,6 +188,18 @@ nav{
 .order-menu a svg path{
   fill:none; stroke: var(--ink-soft); stroke-width: 2; stroke-linecap:round; stroke-linejoin:round;
 }
+.order-menu .order-primary{ background: var(--green); color: var(--white); margin-bottom: 4px; }
+.order-menu .order-primary:hover{ background: #123C29; }
+.order-menu .order-primary small{ display:block; font-size: 0.74rem; font-weight: 400; opacity: 0.85; }
+.order-menu .order-primary svg path{ stroke: var(--white); }
+.order-menu-label{
+  padding: 8px 14px 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
 
 /* ---------- HERO ---------- */
 .hero{
