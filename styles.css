@@ -406,26 +406,36 @@ section{ padding: 90px 32px; }
   margin-bottom: 18px;
   max-width: 520px;
 }
-.people{
+.chef{
   display:flex;
-  flex-wrap:wrap;
-  gap: 28px 40px;
-  margin-top: 8px;
+  align-items:center;
+  gap: 26px;
+  margin-top: 10px;
 }
-.person{ max-width: 230px; }
-.person-name{
+.chef-years{
   font-family:'Fraunces', serif;
-  font-size: 1.2rem;
+  font-size: clamp(3.2rem, 8vw, 4.6rem);
+  line-height: 1;
   color: var(--green);
 }
-.person-role{
+.chef-text{
+  padding-left: 26px;
+  border-left: 1px solid var(--line);
+}
+.chef-name{
+  font-family:'Fraunces', serif;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+.chef-role{
   font-family:'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   color: var(--ink-soft);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   line-height: 1.5;
-  margin-top: 2px;
+  margin-top: 4px;
+  max-width: 240px;
 }
 .about-stats{
   display:flex;
@@ -792,3 +802,52 @@ footer{
 }
 .email-btn:hover{ background: var(--green); color: var(--white); }
 .email-btn:focus-visible{ outline: 2px solid var(--clay); outline-offset: 3px; }
+
+/* ---------- MENU: JUMP LIST + BACK TO TOP ---------- */
+.menu-group{ scroll-margin-top: 96px; }
+#menu{ scroll-margin-top: 80px; }
+.menu-jump{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap: 4px 6px;
+  max-width: 980px;
+  margin: 0 auto 48px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.menu-jump-label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-right: 10px;
+}
+.menu-jump a{
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--green);
+  padding: 8px 12px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.menu-jump a:hover{ border-bottom-color: var(--green); }
+.back-to-top{
+  grid-column: 1 / -1;
+  justify-self: end;
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 10px 0 4px;
+}
+.back-to-top:hover{ color: var(--green); }
+@media (max-width: 600px){
+  .menu-jump{ margin-bottom: 36px; }
+  .menu-jump-label{ flex-basis: 100%; text-align: center; margin: 0 0 4px; }
+  .menu-jump a{ padding: 10px 11px; }
+}
