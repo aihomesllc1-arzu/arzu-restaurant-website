@@ -123,3 +123,18 @@ if (menuPhotos.length) {
   });
   box.addEventListener('close', () => { bigImg.removeAttribute('src'); opener?.focus(); });
 }
+
+// Contact page: the email address is only assembled when the button is clicked,
+// so it never appears in the page source for scrapers to read.
+const emailBtn = document.getElementById('email-btn');
+if (emailBtn) {
+  emailBtn.addEventListener('click', () => {
+    const addr = atob('bW9jLnV6cmEtdGFlQG9mbmk=').split('').reverse().join('');
+    const link = document.createElement('a');
+    link.href = 'mailto:' + addr;
+    link.textContent = addr;
+    link.className = 'map-link';
+    emailBtn.replaceWith(link);
+    link.focus();
+  });
+}

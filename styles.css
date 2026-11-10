@@ -777,3 +777,18 @@ footer{
   .lightbox-prev{ left: 18px; }
   .lightbox-next{ right: 18px; }
 }
+
+/* ---------- CONTACT EMAIL REVEAL ---------- */
+.email-btn{
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--green);
+  background: transparent;
+  border: 1px solid var(--green);
+  border-radius: 2px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.email-btn:hover{ background: var(--green); color: var(--white); }
+.email-btn:focus-visible{ outline: 2px solid var(--clay); outline-offset: 3px; }
