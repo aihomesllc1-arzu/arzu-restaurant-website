@@ -391,6 +391,42 @@ section{ padding: 90px 32px; }
   margin-bottom: 18px;
   max-width: 520px;
 }
+.about-block{
+  margin-top: 36px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.about-block .eyebrow{ display:block; margin-bottom: 12px; }
+.about-block h3{
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  margin-bottom: 16px;
+}
+.about-block p{
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+.people{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 28px 40px;
+  margin-top: 8px;
+}
+.person{ max-width: 230px; }
+.person-name{
+  font-family:'Fraunces', serif;
+  font-size: 1.2rem;
+  color: var(--green);
+}
+.person-role{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  margin-top: 2px;
+}
 .about-stats{
   display:flex;
   gap: 40px;
